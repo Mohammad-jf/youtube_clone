@@ -34,9 +34,9 @@ const Feed = () => {
                     sx={{ color: '#fff' }}> {selectedCategory}
                     <span style={{ color: '#fc1503' }}> videos</span>
                 </Typography>
+                <Videos videos={videos} />
             </Box>
 
-            <Videos videos={videos} />
         </Stack >
     )
 }
