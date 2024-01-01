@@ -8,8 +8,22 @@ import { demoProfilePicture } from '../utils/constants'
 
 const ChannelCard = ({ channelDatail }) => {
     return (
-        <Box>
+        <Box sx={{
+            boxShadow: 'none',
+            borderRadius: '20px',
 
+        }}>
+            <Link to={`/channel/${channelDatail?.id?.channelId}`}>
+                <CardContent sx={{
+                    display: 'flex',
+                    flexDirection: 'column',
+                    justifyContent: 'center',
+                    textAlign: 'center',
+                    color: '#fff'
+                }}>
+                    <CardMedia image={channelDatail?.snippet?.thumbnails?.high?.url || demoProfilePicture} />
+                </CardContent>
+            </Link>
         </Box>
     )
 }
