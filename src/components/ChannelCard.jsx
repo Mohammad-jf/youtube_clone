@@ -6,7 +6,7 @@ import { demoProfilePicture } from '../utils/constants'
 
 
 
-const ChannelCard = ({ channelDetail }) => {
+const ChannelCard = ({ channelDetail ,marginTop}) => {
     return (
         <Box sx={{
             boxShadow: 'none',
@@ -16,7 +16,8 @@ const ChannelCard = ({ channelDetail }) => {
             alignItems: 'center',
             width: { xs: '356px', md: '320px' },
             height: '326px',
-            margin: 'auto'
+            margin: 'auto',
+            marginTop: marginTop
 
         }}>
             <Link to={`/channel/${channelDetail?.id?.channelId}`}>
@@ -39,12 +40,12 @@ const ChannelCard = ({ channelDetail }) => {
 
                     {channelDetail?.statistics?.subscriberCount && (
                         <Typography>
-                            {parseInt(channelDetail?.statistics?.subscriberCount).toLocaleString()}Subscribers
+                            {parseInt(channelDetail?.statistics?.subscriberCount).toLocaleString()} Subscribers
                         </Typography>
                     )}
                 </CardContent>
             </Link>
-        </Box>
+        </Box >
     )
 }
 
